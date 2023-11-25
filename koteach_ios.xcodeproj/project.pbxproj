@@ -12,8 +12,6 @@
 		4E325C742B11A9C900E43408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E325C732B11A9C900E43408 /* Assets.xcassets */; };
 		4E325C772B11A9C900E43408 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E325C762B11A9C900E43408 /* Preview Assets.xcassets */; };
 		4E325C8A2B11AE0C00E43408 /* KoteachAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C892B11AE0C00E43408 /* KoteachAPI.swift */; };
-		4E613BB72B11DC56003305C2 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E613BB62B11DC56003305C2 /* TabbarView.swift */; };
-		4E613BC52B11DF9A003305C2 /* Lato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E613BC42B11DF9A003305C2 /* Lato.swift */; };
 		9F8109172B11BBDF00C5D1FC /* AcademyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8109162B11BBDF00C5D1FC /* AcademyDetailView.swift */; };
 		9F8109192B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8109182B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift */; };
 		CC4DCF8638753F37C26541C6 /* Pods_koteach_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03A036CBECCF377BCFAC569 /* Pods_koteach_ios.framework */; };
@@ -26,18 +24,6 @@
 		4E325C732B11A9C900E43408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E325C762B11A9C900E43408 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E325C892B11AE0C00E43408 /* KoteachAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoteachAPI.swift; sourceTree = "<group>"; };
-		4E613BB62B11DC56003305C2 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
-		4E613BBA2B11DF2D003305C2 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		4E613BBB2B11DF2D003305C2 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
-		4E613BBC2B11DF2D003305C2 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
-		4E613BBD2B11DF2D003305C2 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
-		4E613BBE2B11DF2D003305C2 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
-		4E613BBF2B11DF2D003305C2 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
-		4E613BC02B11DF2D003305C2 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
-		4E613BC12B11DF2D003305C2 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
-		4E613BC22B11DF2D003305C2 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
-		4E613BC32B11DF2D003305C2 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
-		4E613BC42B11DF9A003305C2 /* Lato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lato.swift; sourceTree = "<group>"; };
 		591E887C69C2B34186A30313 /* Pods-koteach_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koteach_ios.debug.xcconfig"; path = "Target Support Files/Pods-koteach_ios/Pods-koteach_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		947CC47CCB278D64AB6B5C24 /* Pods-koteach_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koteach_ios.release.xcconfig"; path = "Target Support Files/Pods-koteach_ios/Pods-koteach_ios.release.xcconfig"; sourceTree = "<group>"; };
 		9F8109162B11BBDF00C5D1FC /* AcademyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyDetailView.swift; sourceTree = "<group>"; };
@@ -117,7 +103,6 @@
 			children = (
 				4E325C862B11ADC300E43408 /* LawChatbotView */,
 				4E325C842B11ADA000E43408 /* AcademyReviewView */,
-				4E613BB62B11DC56003305C2 /* TabbarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,7 +119,6 @@
 		4E325C822B11AD9200E43408 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				4E613BB82B11DEFF003305C2 /* Fonts */,
 				4E325C832B11AD9800E43408 /* Network */,
 			);
 			path = Common;
@@ -177,32 +161,6 @@
 			children = (
 			);
 			path = LayChatbotViewModel;
-			sourceTree = "<group>";
-		};
-		4E613BB82B11DEFF003305C2 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				4E613BB92B11DF12003305C2 /* LatoFamily */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		4E613BB92B11DF12003305C2 /* LatoFamily */ = {
-			isa = PBXGroup;
-			children = (
-				4E613BBD2B11DF2D003305C2 /* Lato-Black.ttf */,
-				4E613BC12B11DF2D003305C2 /* Lato-BlackItalic.ttf */,
-				4E613BC32B11DF2D003305C2 /* Lato-Bold.ttf */,
-				4E613BBF2B11DF2D003305C2 /* Lato-BoldItalic.ttf */,
-				4E613BBB2B11DF2D003305C2 /* Lato-Italic.ttf */,
-				4E613BC02B11DF2D003305C2 /* Lato-Light.ttf */,
-				4E613BC22B11DF2D003305C2 /* Lato-LightItalic.ttf */,
-				4E613BBA2B11DF2D003305C2 /* Lato-Regular.ttf */,
-				4E613BBC2B11DF2D003305C2 /* Lato-Thin.ttf */,
-				4E613BBE2B11DF2D003305C2 /* Lato-ThinItalic.ttf */,
-				4E613BC42B11DF9A003305C2 /* Lato.swift */,
-			);
-			path = LatoFamily;
 			sourceTree = "<group>";
 		};
 		E20712217D290139A8A2034D /* Pods */ = {
@@ -328,10 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E613BB72B11DC56003305C2 /* TabbarView.swift in Sources */,
 				9F8109172B11BBDF00C5D1FC /* AcademyDetailView.swift in Sources */,
 				4E325C722B11A9C800E43408 /* AcademyReviewView.swift in Sources */,
-				4E613BC52B11DF9A003305C2 /* Lato.swift in Sources */,
 				9F8109192B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift in Sources */,
 				4E325C8A2B11AE0C00E43408 /* KoteachAPI.swift in Sources */,
 				4E325C702B11A9C800E43408 /* koteach_iosApp.swift in Sources */,
