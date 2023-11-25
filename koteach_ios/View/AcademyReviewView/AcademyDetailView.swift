@@ -8,55 +8,64 @@
 import SwiftUI
 
 struct AcademyDetailView: View {
+    @Binding var showingBottomSheetView: Bool
+
+    
+    
     var body: some View {
-        VStack (spacing:8) {
-            Rectangle()
-                        /*frame(height: 320)*/
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .shadow(color: .black .opacity(0.5), radius: 2)
+        ZStack {
+//            VStack {
+//                Spacer().frame(height: 20)
+//                
+////                HStack {
+////                    Spacer()
+////                    
+////                    Image(systemName: "xmark")
+////                        .resizable()
+////                        .frame(width: 20, height: 20)
+////                        .onTapGesture {
+////                            showingBottomSheetView = false
+////                        }
+////                    Spacer().frame(width: 20)
+////                }
+////                Spacer()
+//            }
+//            
             
-            //Academy details
             
-            HStack (alignment: .top){
-                // Details
-                VStack(alignment: .leading) {
-                    Text("Hagwon Name")
-                        .lato(family: .Bold, size: 15)
-                        .foregroundColor(.black)
-                    
-                    Text("Location, City")
-                        .foregroundStyle(.gray)
-                        .lato(family: .Light, size: 10)
-                    
-                    HStack {
-                        Image(systemName: "star.fill")
-                        Text("4.5")
-                            .lato(family: .Light, size: 10)
-                    }
+            ScrollView {
+                LazyVStack (spacing: 5) {
+                    ForEach (0 ... 20, id: \.self) { listing in
+                        ZStack {
+                            
+//                            Spacer().frame(width: 10)
+                            
+                            VStack {
+                                
+                                Text("I strongly advise avoiding this school like the plague. It has a high turnover rate due to management and the toxic working environment. In the 6 months I worked there 9 teachers have left, one of which was a midnight run, and more are planning to leave. It's usually understaffed because they can't retain anyone, with the additional work being placed on the remaining teachers.")
+                            Spacer().frame(width: 10)
+                                
+                                HStack{
+                                    Spacer().frame(width: 20)
+                                    Rectangle()
+                                        .frame(height: 0.5)
+                                        .foregroundColor(.gray)
+                                    Spacer().frame(width: 20)
+                                }
+                            
+                            }
+
+                        }
                         
-                    Text("Comments asdsdfwregegeg")
-                        .lato(family: .Regular, size: 12)
-                        .foregroundColor(.gray)
-            
-                
+
+                    }
                 }
-//                .layoutPriority(1)
-                
-                Spacer()
-            
-                // Rating
-//                HStack (spacing: 2) {
-//                    Image(systemName: "star.fill")
-//                    Text("4.5")
-//                }
-                .foregroundStyle(.black)
             }
-            .font(.footnote)
         }
-        .padding()
     }
 }
 
-#Preview {
-    AcademyDetailView()
-}
+//#Preview {
+//    AcademyDetailView()
+//}
+//
