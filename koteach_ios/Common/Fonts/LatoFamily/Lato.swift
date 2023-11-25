@@ -17,6 +17,7 @@ struct LatoFont: ViewModifier {
     var size: CGFloat
 
     func body(content: Content) -> some View {
+//        return content.font(.custom("Lato-\(family.rawValue)", fixedSize: size))
         return content.font(.custom("Lato-\(family.rawValue)", fixedSize: size))
     }
 }
