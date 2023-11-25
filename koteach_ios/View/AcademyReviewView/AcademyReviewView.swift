@@ -19,9 +19,6 @@ struct AcademyReviewView: View {
                             .frame(height: 400)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         
-                        Text("aaaAAA")
-                            .lato(family: .Black, size: 20)
-                        
                     }
                 }
                 .padding()
