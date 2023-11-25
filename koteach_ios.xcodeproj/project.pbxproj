@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4E325C702B11A9C800E43408 /* koteach_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C6F2B11A9C800E43408 /* koteach_iosApp.swift */; };
-		4E325C722B11A9C800E43408 /* AcademyReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C712B11A9C800E43408 /* AcademyReviewView.swift */; };
+		4E325C722B11A9C800E43408 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C712B11A9C800E43408 /* ContentView.swift */; };
 		4E325C742B11A9C900E43408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E325C732B11A9C900E43408 /* Assets.xcassets */; };
 		4E325C772B11A9C900E43408 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E325C762B11A9C900E43408 /* Preview Assets.xcassets */; };
 		4E325C8A2B11AE0C00E43408 /* KoteachAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C892B11AE0C00E43408 /* KoteachAPI.swift */; };
 		4E5472612B12035800B49E2B /* LawChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5472602B12035800B49E2B /* LawChatbotView.swift */; };
 		4E5472642B12039000B49E2B /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5472632B12039000B49E2B /* CalculatorView.swift */; };
 		4E5472662B1203BD00B49E2B /* AcademyReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5472652B1203BD00B49E2B /* AcademyReviewViewModel.swift */; };
+		4E5472682B121A6F00B49E2B /* AcademyReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5472672B121A6F00B49E2B /* AcademyReviewView.swift */; };
 		4E613BB72B11DC56003305C2 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E613BB62B11DC56003305C2 /* TabbarView.swift */; };
 		4E613BC52B11DF9A003305C2 /* Lato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E613BC42B11DF9A003305C2 /* Lato.swift */; };
 		4E613BC62B11E9C6003305C2 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E613BBD2B11DF2D003305C2 /* Lato-Black.ttf */; };
@@ -36,13 +37,14 @@
 /* Begin PBXFileReference section */
 		4E325C6C2B11A9C800E43408 /* koteach_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = koteach_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E325C6F2B11A9C800E43408 /* koteach_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koteach_iosApp.swift; sourceTree = "<group>"; };
-		4E325C712B11A9C800E43408 /* AcademyReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyReviewView.swift; sourceTree = "<group>"; };
+		4E325C712B11A9C800E43408 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E325C732B11A9C900E43408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E325C762B11A9C900E43408 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E325C892B11AE0C00E43408 /* KoteachAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoteachAPI.swift; sourceTree = "<group>"; };
 		4E5472602B12035800B49E2B /* LawChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawChatbotView.swift; sourceTree = "<group>"; };
 		4E5472632B12039000B49E2B /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		4E5472652B1203BD00B49E2B /* AcademyReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyReviewViewModel.swift; sourceTree = "<group>"; };
+		4E5472672B121A6F00B49E2B /* AcademyReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyReviewView.swift; sourceTree = "<group>"; };
 		4E613BB62B11DC56003305C2 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		4E613BBA2B11DF2D003305C2 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		4E613BBB2B11DF2D003305C2 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		4E325C802B11AD4A00E43408 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E325C712B11A9C800E43408 /* ContentView.swift */,
 				4E5472622B12037F00B49E2B /* CalculatorView */,
 				4E325C862B11ADC300E43408 /* LawChatbotView */,
 				4E325C842B11ADA000E43408 /* AcademyReviewView */,
@@ -171,7 +174,7 @@
 		4E325C842B11ADA000E43408 /* AcademyReviewView */ = {
 			isa = PBXGroup;
 			children = (
-				4E325C712B11A9C800E43408 /* AcademyReviewView.swift */,
+				4E5472672B121A6F00B49E2B /* AcademyReviewView.swift */,
 				9F8109162B11BBDF00C5D1FC /* AcademyDetailView.swift */,
 				9F8109182B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift */,
 			);
@@ -371,8 +374,9 @@
 			files = (
 				4E613BB72B11DC56003305C2 /* TabbarView.swift in Sources */,
 				9F8109172B11BBDF00C5D1FC /* AcademyDetailView.swift in Sources */,
-				4E325C722B11A9C800E43408 /* AcademyReviewView.swift in Sources */,
+				4E325C722B11A9C800E43408 /* ContentView.swift in Sources */,
 				4E5472612B12035800B49E2B /* LawChatbotView.swift in Sources */,
+				4E5472682B121A6F00B49E2B /* AcademyReviewView.swift in Sources */,
 				4E613BC52B11DF9A003305C2 /* Lato.swift in Sources */,
 				9F8109192B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift in Sources */,
 				4E325C8A2B11AE0C00E43408 /* KoteachAPI.swift in Sources */,
