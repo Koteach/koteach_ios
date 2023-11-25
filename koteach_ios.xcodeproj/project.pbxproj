@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4E325C702B11A9C800E43408 /* koteach_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C6F2B11A9C800E43408 /* koteach_iosApp.swift */; };
-		4E325C722B11A9C800E43408 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C712B11A9C800E43408 /* ContentView.swift */; };
+		4E325C722B11A9C800E43408 /* AcademyReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C712B11A9C800E43408 /* AcademyReviewView.swift */; };
 		4E325C742B11A9C900E43408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E325C732B11A9C900E43408 /* Assets.xcassets */; };
 		4E325C772B11A9C900E43408 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E325C762B11A9C900E43408 /* Preview Assets.xcassets */; };
 		4E325C8A2B11AE0C00E43408 /* KoteachAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C892B11AE0C00E43408 /* KoteachAPI.swift */; };
+		9F8109172B11BBDF00C5D1FC /* AcademyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8109162B11BBDF00C5D1FC /* AcademyDetailView.swift */; };
+		9F8109192B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8109182B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift */; };
 		CC4DCF8638753F37C26541C6 /* Pods_koteach_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03A036CBECCF377BCFAC569 /* Pods_koteach_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E325C6C2B11A9C800E43408 /* koteach_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = koteach_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E325C6F2B11A9C800E43408 /* koteach_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koteach_iosApp.swift; sourceTree = "<group>"; };
-		4E325C712B11A9C800E43408 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4E325C712B11A9C800E43408 /* AcademyReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyReviewView.swift; sourceTree = "<group>"; };
 		4E325C732B11A9C900E43408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E325C762B11A9C900E43408 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E325C892B11AE0C00E43408 /* KoteachAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoteachAPI.swift; sourceTree = "<group>"; };
 		591E887C69C2B34186A30313 /* Pods-koteach_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koteach_ios.debug.xcconfig"; path = "Target Support Files/Pods-koteach_ios/Pods-koteach_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		947CC47CCB278D64AB6B5C24 /* Pods-koteach_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koteach_ios.release.xcconfig"; path = "Target Support Files/Pods-koteach_ios/Pods-koteach_ios.release.xcconfig"; sourceTree = "<group>"; };
+		9F8109162B11BBDF00C5D1FC /* AcademyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyDetailView.swift; sourceTree = "<group>"; };
+		9F8109182B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademySearchandFilterBar.swift; sourceTree = "<group>"; };
 		F03A036CBECCF377BCFAC569 /* Pods_koteach_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_koteach_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,7 +77,6 @@
 				4E325C812B11AD4E00E43408 /* ViewModel */,
 				4E325C802B11AD4A00E43408 /* View */,
 				4E325C6F2B11A9C800E43408 /* koteach_iosApp.swift */,
-				4E325C712B11A9C800E43408 /* ContentView.swift */,
 				4E325C732B11A9C900E43408 /* Assets.xcassets */,
 				4E325C752B11A9C900E43408 /* Preview Content */,
 			);
@@ -132,6 +135,9 @@
 		4E325C842B11ADA000E43408 /* AcademyReviewView */ = {
 			isa = PBXGroup;
 			children = (
+				4E325C712B11A9C800E43408 /* AcademyReviewView.swift */,
+				9F8109162B11BBDF00C5D1FC /* AcademyDetailView.swift */,
+				9F8109182B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift */,
 			);
 			path = AcademyReviewView;
 			sourceTree = "<group>";
@@ -280,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E325C722B11A9C800E43408 /* ContentView.swift in Sources */,
+				9F8109172B11BBDF00C5D1FC /* AcademyDetailView.swift in Sources */,
+				4E325C722B11A9C800E43408 /* AcademyReviewView.swift in Sources */,
+				9F8109192B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift in Sources */,
 				4E325C8A2B11AE0C00E43408 /* KoteachAPI.swift in Sources */,
 				4E325C702B11A9C800E43408 /* koteach_iosApp.swift in Sources */,
 			);
