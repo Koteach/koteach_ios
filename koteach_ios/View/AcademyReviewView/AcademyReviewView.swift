@@ -24,7 +24,7 @@ struct AcademyReviewView: View {
                                 .foregroundColor(.white)
                                 .overlay {
                                     RoundedRectangle(cornerRadius: 10)
-                                        .stroke(lineWidth: 0.5)
+                                        .stroke(.gray, lineWidth: 0.5)
                                 }
                             
                             //Academy details
@@ -36,7 +36,7 @@ struct AcademyReviewView: View {
                                 VStack(alignment: .leading) {
                                     Spacer().frame(height: 12)
                                     
-                                    Text("Hagwon Name")
+                                    Text("School Name")
                                         .lato(family: .Bold, size: 15)
                                         .foregroundColor(.black)
                                     
@@ -51,6 +51,7 @@ struct AcademyReviewView: View {
                                         Image(systemName: "star.fill")
                                             .resizable()
                                             .frame(width: 12, height: 12)
+                                            .foregroundColor(.yellow)
                                         
                                         Spacer().frame(width: 1)
                                         

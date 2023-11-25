@@ -40,21 +40,7 @@ struct ContentView: View {
                 
             }
             
-            VStack {
-                AcademySearchandFilterBar()
-                
-                ScrollView {
-                    LazyVStack (spacing: 30) {
-                        ForEach (0 ... 10, id: \.self) { listing in Rectangle()
-                                .frame(height: 400)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .foregroundColor(.red)
-                            
-                        }
-                    }
-                    .padding()
-                }
-            }
+            CalculatorView()
             .tabItem {
                 Image(systemName: "dollarsign.square")
                 Text("Calculator")

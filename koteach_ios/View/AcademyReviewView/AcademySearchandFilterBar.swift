@@ -38,7 +38,7 @@ struct AcademySearchandFilterBar: View {
         .overlay {
             Capsule()
                 .stroke(lineWidth: 0.5)
-            
+                .fill(.blue)
             Spacer()
             
         }
