@@ -1,0 +1,6 @@
+framework module Pods_koteach_ios {
+  umbrella header "Pods-koteach_ios-umbrella.h"
+
+  export *
+  module * { export * }
+}
