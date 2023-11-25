@@ -6,8 +6,8 @@ target 'koteach_ios' do
   use_frameworks!
 
 
-  pod 'Alamofire', '~> 5.4.0'
-  pod 'Kingfisher', '~> 7.6.1'
+  pod 'Alamofire'
+  pod 'Kingfisher'
 
 
   # Pods for koteach_ios
