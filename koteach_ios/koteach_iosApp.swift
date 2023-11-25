@@ -11,7 +11,7 @@ import SwiftUI
 struct koteach_iosApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AcademyReviewView()
         }
     }
 }
