@@ -12,6 +12,8 @@
 		4E325C742B11A9C900E43408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E325C732B11A9C900E43408 /* Assets.xcassets */; };
 		4E325C772B11A9C900E43408 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E325C762B11A9C900E43408 /* Preview Assets.xcassets */; };
 		4E325C8A2B11AE0C00E43408 /* KoteachAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E325C892B11AE0C00E43408 /* KoteachAPI.swift */; };
+		9F8109112B11B3AB00C5D1FC /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8109102B11B3AB00C5D1FC /* ExploreView.swift */; };
+		9F8109132B11B43300C5D1FC /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8109122B11B43300C5D1FC /* ChatView.swift */; };
 		CC4DCF8638753F37C26541C6 /* Pods_koteach_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03A036CBECCF377BCFAC569 /* Pods_koteach_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		4E325C892B11AE0C00E43408 /* KoteachAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoteachAPI.swift; sourceTree = "<group>"; };
 		591E887C69C2B34186A30313 /* Pods-koteach_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koteach_ios.debug.xcconfig"; path = "Target Support Files/Pods-koteach_ios/Pods-koteach_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		947CC47CCB278D64AB6B5C24 /* Pods-koteach_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koteach_ios.release.xcconfig"; path = "Target Support Files/Pods-koteach_ios/Pods-koteach_ios.release.xcconfig"; sourceTree = "<group>"; };
+		9F8109102B11B3AB00C5D1FC /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExploreView.swift; path = ../../../../ExploreView.swift; sourceTree = "<group>"; };
+		9F8109122B11B43300C5D1FC /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = ../../../../ChatView.swift; sourceTree = "<group>"; };
 		F03A036CBECCF377BCFAC569 /* Pods_koteach_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_koteach_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +136,7 @@
 		4E325C842B11ADA000E43408 /* AcademyReviewView */ = {
 			isa = PBXGroup;
 			children = (
+				9F8109102B11B3AB00C5D1FC /* ExploreView.swift */,
 			);
 			path = AcademyReviewView;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 		4E325C862B11ADC300E43408 /* LawChatbotView */ = {
 			isa = PBXGroup;
 			children = (
+				9F8109122B11B43300C5D1FC /* ChatView.swift */,
 			);
 			path = LawChatbotView;
 			sourceTree = "<group>";
@@ -282,6 +288,8 @@
 			files = (
 				4E325C722B11A9C800E43408 /* ContentView.swift in Sources */,
 				4E325C8A2B11AE0C00E43408 /* KoteachAPI.swift in Sources */,
+				9F8109132B11B43300C5D1FC /* ChatView.swift in Sources */,
+				9F8109112B11B3AB00C5D1FC /* ExploreView.swift in Sources */,
 				4E325C702B11A9C800E43408 /* koteach_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

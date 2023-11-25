@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach (0 ... 10, id: \.self) { listing in Rectangle()
+                            .frame(height: 400)
+                            .clipShape(Rectangle())
+//                            .
+                        
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
