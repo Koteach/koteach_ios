@@ -24,6 +24,7 @@
 		4E613BCD2B11E9CA003305C2 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E613BBB2B11DF2D003305C2 /* Lato-Italic.ttf */; };
 		4E613BCE2B11E9CA003305C2 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E613BC32B11DF2D003305C2 /* Lato-Bold.ttf */; };
 		4E613BCF2B11E9CA003305C2 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E613BBA2B11DF2D003305C2 /* Lato-Regular.ttf */; };
+		4E613BD82B11FCC6003305C2 /* koteach-ios-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E613BD72B11FCC6003305C2 /* koteach-ios-Info.plist */; };
 		9F8109172B11BBDF00C5D1FC /* AcademyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8109162B11BBDF00C5D1FC /* AcademyDetailView.swift */; };
 		9F8109192B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8109182B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift */; };
 		CC4DCF8638753F37C26541C6 /* Pods_koteach_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03A036CBECCF377BCFAC569 /* Pods_koteach_ios.framework */; };
@@ -48,7 +49,7 @@
 		4E613BC22B11DF2D003305C2 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		4E613BC32B11DF2D003305C2 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		4E613BC42B11DF9A003305C2 /* Lato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lato.swift; sourceTree = "<group>"; };
-		4E613BD02B11EAB7003305C2 /* koteach-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "koteach-ios-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4E613BD72B11FCC6003305C2 /* koteach-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "koteach-ios-Info.plist"; sourceTree = "<group>"; };
 		591E887C69C2B34186A30313 /* Pods-koteach_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koteach_ios.debug.xcconfig"; path = "Target Support Files/Pods-koteach_ios/Pods-koteach_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		947CC47CCB278D64AB6B5C24 /* Pods-koteach_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-koteach_ios.release.xcconfig"; path = "Target Support Files/Pods-koteach_ios/Pods-koteach_ios.release.xcconfig"; sourceTree = "<group>"; };
 		9F8109162B11BBDF00C5D1FC /* AcademyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyDetailView.swift; sourceTree = "<group>"; };
@@ -97,7 +98,7 @@
 		4E325C6E2B11A9C800E43408 /* koteach_ios */ = {
 			isa = PBXGroup;
 			children = (
-				4E613BD02B11EAB7003305C2 /* koteach-ios-Info.plist */,
+				4E613BD72B11FCC6003305C2 /* koteach-ios-Info.plist */,
 				4E325C822B11AD9200E43408 /* Common */,
 				4E325C7F2B11AD4500E43408 /* Model */,
 				4E325C812B11AD4E00E43408 /* ViewModel */,
@@ -293,6 +294,7 @@
 				4E325C772B11A9C900E43408 /* Preview Assets.xcassets in Resources */,
 				4E613BC72B11E9CA003305C2 /* Lato-ThinItalic.ttf in Resources */,
 				4E613BC92B11E9CA003305C2 /* Lato-BoldItalic.ttf in Resources */,
+				4E613BD82B11FCC6003305C2 /* koteach-ios-Info.plist in Resources */,
 				4E613BCF2B11E9CA003305C2 /* Lato-Regular.ttf in Resources */,
 				4E613BCC2B11E9CA003305C2 /* Lato-BlackItalic.ttf in Resources */,
 				4E613BC62B11E9C6003305C2 /* Lato-Black.ttf in Resources */,
@@ -494,7 +496,7 @@
 				DEVELOPMENT_TEAM = WMN3W52C7Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "koteach-ios-Info.plist";
+				INFOPLIST_FILE = "/Users/johnhur/Documents/Swift-Colab/koteach_ios/koteach_ios/koteach-ios-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -526,7 +528,7 @@
 				DEVELOPMENT_TEAM = WMN3W52C7Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "koteach-ios-Info.plist";
+				INFOPLIST_FILE = "/Users/johnhur/Documents/Swift-Colab/koteach_ios/koteach_ios/koteach-ios-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
