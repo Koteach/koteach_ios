@@ -22,20 +22,20 @@ struct LatoFont: ViewModifier {
 }
 
 extension View {
-    func spoqa(family: LatoFamily, size: CGFloat) -> some View {
+    func lato(family: LatoFamily, size: CGFloat) -> some View {
         return self.modifier(LatoFont(family: family, size: size))
     }
 }
 
 extension UIFont {
-    static func spoqa(family: LatoFamily, size: CGFloat) -> UIFont {
+    static func lato(family: LatoFamily, size: CGFloat) -> UIFont {
         let font = UIFont(name: "Lato-\(family.rawValue)", size: size)
         return font ?? UIFont()
     }
 }
 
 extension Font {
-    static func spoqa(family: LatoFamily, size: CGFloat) -> Font {
+    static func lato(family: LatoFamily, size: CGFloat) -> Font {
         let font = Font.custom("Lato-\(family.rawValue)", size: size)
         return font
     }
