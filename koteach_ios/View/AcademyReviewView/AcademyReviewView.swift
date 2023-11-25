@@ -1,29 +1,32 @@
 //
-//  ContentView.swift
+//  AcademyReviewView.swift
 //  koteach_ios
 //
 //  Created by John Hur on 11/25/23.
+// Academy Review View
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct AcademyReviewView: View {
     var body: some View {
         NavigationStack {
+            AcademySearchandFilterBar()
+
             ScrollView {
-                LazyVStack {
+                LazyVStack (spacing: 30) {
                     ForEach (0 ... 10, id: \.self) { listing in Rectangle()
                             .frame(height: 400)
-                            .clipShape(Rectangle())
-//                            .
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
                         
                     }
                 }
+                .padding()
             }
         }
     }
 }
 
 #Preview {
-    ContentView()
+    AcademyReviewView()
 }
