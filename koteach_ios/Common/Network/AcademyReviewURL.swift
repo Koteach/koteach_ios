@@ -13,6 +13,8 @@ extension KoteachAPI {
     
     static let getReviewsUrl = "/reviews"
     
+    static let getAnswer = "/answer"
+    
 }
 
 extension KoteachAPI {
@@ -35,12 +37,12 @@ extension KoteachAPI {
         return get(url)
     }
     
-    static func getReviews(_ page: Int) -> AnyPublisher<[ReviewModel], Error> {
+    static func getReviews(_ id: Int) -> AnyPublisher<[ReviewModel], Error> {
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         urlComponents?.path = getReviewsUrl
         urlComponents?.queryItems = [
-            URLQueryItem(name: "hagwon_id", value: "20"),
-            URLQueryItem(name: "limit", value: "10"),
+            URLQueryItem(name: "hagwon_id", value: "\(id)"),
+            URLQueryItem(name: "limit", value: "100"),
             URLQueryItem(name: "page", value: "1")
         ]
 
@@ -54,6 +56,25 @@ extension KoteachAPI {
 
         return get(url)
     }
+    
+    static func getAnswer(_ text: String) -> AnyPublisher<AnswerModel, Error> {
+        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
+        urlComponents?.path = getAnswer
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "question", value: "\(text)"),
+        ]
+
+        if let percentEncodedQuery = urlComponents?.percentEncodedQuery, !percentEncodedQuery.isEmpty {
+            urlComponents?.percentEncodedQuery?.append("&")
+        }
+
+        guard let url = urlComponents?.url else {
+            return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
+        }
+
+        return get(url)
+    }
+
 
     
 }

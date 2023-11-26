@@ -21,6 +21,7 @@
 		4E54726F2B1247F800B49E2B /* ConvertHexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E54726E2B1247F800B49E2B /* ConvertHexColor.swift */; };
 		4E5472722B1248FC00B49E2B /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5472712B1248FC00B49E2B /* CalculatorViewModel.swift */; };
 		4E5472742B12CCB400B49E2B /* AcademyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5472732B12CCB400B49E2B /* AcademyDetailViewModel.swift */; };
+		4E5472762B12D7B000B49E2B /* LawChatbotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5472752B12D7B000B49E2B /* LawChatbotViewModel.swift */; };
 		4E613BC52B11DF9A003305C2 /* Lato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E613BC42B11DF9A003305C2 /* Lato.swift */; };
 		4E613BC62B11E9C6003305C2 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E613BBD2B11DF2D003305C2 /* Lato-Black.ttf */; };
 		4E613BC72B11E9CA003305C2 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E613BBE2B11DF2D003305C2 /* Lato-ThinItalic.ttf */; };
@@ -54,6 +55,7 @@
 		4E54726E2B1247F800B49E2B /* ConvertHexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertHexColor.swift; sourceTree = "<group>"; };
 		4E5472712B1248FC00B49E2B /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		4E5472732B12CCB400B49E2B /* AcademyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyDetailViewModel.swift; sourceTree = "<group>"; };
+		4E5472752B12D7B000B49E2B /* LawChatbotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawChatbotViewModel.swift; sourceTree = "<group>"; };
 		4E613BBA2B11DF2D003305C2 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		4E613BBB2B11DF2D003305C2 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		4E613BBC2B11DF2D003305C2 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
@@ -157,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5472702B1248F000B49E2B /* CaculatorViewModel */,
-				4E325C882B11ADD600E43408 /* LayChatbotViewModel */,
+				4E325C882B11ADD600E43408 /* LawChatbotViewModel */,
 				4E325C872B11ADCC00E43408 /* AcademyReviewViewModel */,
 			);
 			path = ViewModel;
@@ -209,11 +211,12 @@
 			path = AcademyReviewViewModel;
 			sourceTree = "<group>";
 		};
-		4E325C882B11ADD600E43408 /* LayChatbotViewModel */ = {
+		4E325C882B11ADD600E43408 /* LawChatbotViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4E5472752B12D7B000B49E2B /* LawChatbotViewModel.swift */,
 			);
-			path = LayChatbotViewModel;
+			path = LawChatbotViewModel;
 			sourceTree = "<group>";
 		};
 		4E5472622B12037F00B49E2B /* CalculatorView */ = {
@@ -409,6 +412,7 @@
 				4E5472612B12035800B49E2B /* LawChatbotView.swift in Sources */,
 				4E5472682B121A6F00B49E2B /* AcademyReviewView.swift in Sources */,
 				4E613BC52B11DF9A003305C2 /* Lato.swift in Sources */,
+				4E5472762B12D7B000B49E2B /* LawChatbotViewModel.swift in Sources */,
 				9F8109192B11BF2E00C5D1FC /* AcademySearchandFilterBar.swift in Sources */,
 				4E54726A2B12224E00B49E2B /* AcademyReviewURL.swift in Sources */,
 				4E325C8A2B11AE0C00E43408 /* KoteachAPI.swift in Sources */,

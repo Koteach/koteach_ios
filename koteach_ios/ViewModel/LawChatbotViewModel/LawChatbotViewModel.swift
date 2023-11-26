@@ -1,5 +1,5 @@
 //
-//  AcademyDetailViewModel.swift
+//  LawChatbotViewModel.swift
 //  koteach_ios
 //
 //  Created by John Hur on 11/26/23.
@@ -8,23 +8,26 @@
 import Foundation
 import Combine
 
-class AcademyDetailViewModel: ObservableObject {
+class LawChatbotViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
 
-    @Published var reviewDatas: [ReviewModel]?
+    @Published var answer: AnswerModel = AnswerModel(answer: "'", time: "")
     
-    func getReviews(_ id: Int) {
-        KoteachAPI.getReviews(id)
+    
+    func getChatbotAnswer(_ text: String) {
+        KoteachAPI.getAnswer(text)
             .compactMap { $0 }
             .sink(receiveCompletion: { result in
                 print("\(result)")
             }, receiveValue: { [weak self] model in
-                print("\(model)")
                 
-                self?.reviewDatas = model
+                self?.answer = model
             })
             .store(in: &cancellable)
+
     }
+
+
     
 }

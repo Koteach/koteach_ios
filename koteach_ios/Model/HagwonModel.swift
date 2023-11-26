@@ -25,3 +25,8 @@ struct ReviewModel: Codable, Hashable {
     let raring: Int?
     let createdAt: String?
 }
+
+struct AnswerModel: Codable, Hashable {
+    let answer: String?
+    let time: String?
+}

@@ -23,6 +23,17 @@ struct AcademyReviewView: View {
                     Spacer().frame(width: 20)
                 }
                 
+                Spacer().frame(height: 10)
+                
+                HStack {
+                    Spacer()
+                    
+                    Image(systemName: "slider.horizontal.3")
+                        .foregroundColor(.black.opacity(0.7))
+                    
+                    Spacer().frame(width: 20)
+                }
+                
                 ScrollView(showsIndicators: false) {
                     LazyVStack (spacing: 20) {
                         if let data = viewModel.hagwonDatas {

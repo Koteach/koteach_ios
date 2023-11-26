@@ -11,8 +11,6 @@ struct AcademyDetailView: View {
     @StateObject var viewModel = AcademyDetailViewModel()
     
     var hagwonData: HagwonModel
-//    var hagwonId: Int
-    
     
     var body: some View {
         ZStack {
@@ -112,8 +110,7 @@ struct AcademyDetailView: View {
             }
         }
         .onAppear {
-//            hagwonData.id
-            viewModel.getReviews()
+            viewModel.getReviews(hagwonData.id ?? 1)
         }
     }
 }
