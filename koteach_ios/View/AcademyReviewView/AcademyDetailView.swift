@@ -8,59 +8,112 @@
 import SwiftUI
 
 struct AcademyDetailView: View {
-    @Binding var showingBottomSheetView: Bool
-
+    @StateObject var viewModel = AcademyDetailViewModel()
+    
+    var hagwonData: HagwonModel
+//    var hagwonId: Int
     
     
     var body: some View {
         ZStack {
-//            VStack {
-//                Spacer().frame(height: 20)
-//                
-////                HStack {
-////                    Spacer()
-////                    
-////                    Image(systemName: "xmark")
-////                        .resizable()
-////                        .frame(width: 20, height: 20)
-////                        .onTapGesture {
-////                            showingBottomSheetView = false
-////                        }
-////                    Spacer().frame(width: 20)
-////                }
-////                Spacer()
-//            }
-//            
-            
             
             ScrollView {
-                LazyVStack (spacing: 5) {
-                    ForEach (0 ... 20, id: \.self) { listing in
-                        ZStack {
-                            
-//                            Spacer().frame(width: 10)
-                            
-                            VStack {
-                                
-                                Text("I strongly advise avoiding this school like the plague. It has a high turnover rate due to management and the toxic working environment. In the 6 months I worked there 9 teachers have left, one of which was a midnight run, and more are planning to leave. It's usually understaffed because they can't retain anyone, with the additional work being placed on the remaining teachers.")
-                            Spacer().frame(width: 10)
-                                
-                                HStack{
-                                    Spacer().frame(width: 20)
-                                    Rectangle()
-                                        .frame(height: 0.5)
-                                        .foregroundColor(.gray)
-                                    Spacer().frame(width: 20)
-                                }
-                            
-                            }
+                VStack {
+                    HStack {
+                        Spacer().frame(width: 20)
 
+                        HagwonView(item: hagwonData)
+
+                        Spacer().frame(width: 20)
+                    }
+                    
+                    Spacer().frame(height: 20)
+                    
+                    Button {
+                        print("Write review")
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 4)
+                                .foregroundColor(Color(hex: "648BF2"))
+                                .frame(height: 40)
+                                .padding([.leading, .trailing], 20)
+                            
+                            Text("Write Review")
+                                .lato(family: .Bold, size: 17)
+                                .foregroundColor(.white)
+                        }
+                    }
+                    
+                    Spacer().frame(height: 20)
+                    
+                    LazyVStack(alignment: .leading) {
+                        if let data = viewModel.reviewDatas {
+                            ForEach(data, id: \.self) { item in
+                                VStack {
+                                    HStack {
+                                        Spacer().frame(width: 20)
+                                        
+                                        VStack {
+                                            Image(systemName: "person.circle")
+                                                .resizable()
+                                                .frame(width: 30, height: 30)
+                                                .foregroundColor(.black.opacity(0.4))
+                                            Spacer()
+                                        }
+                                        
+                                        Spacer().frame(width: 15)
+                                        
+                                        VStack {
+                                            HStack {
+                                                Text("\(item.title ?? "")")
+                                                    .lato(family: .Bold, size: 14)
+                                                    .foregroundColor(.black.opacity(0.8))
+                                                
+                                                Image(systemName: "star.fill")
+                                                    .resizable()
+                                                    .frame(width: 12, height: 12)
+                                                    .foregroundColor(.yellow)
+                                                
+                                                Text(String(format: "%.1f", item.raring ?? 0.0))
+                                                    .lato(family: .Light, size: 10)
+                                                
+                                                Spacer()
+                                            }
+                                            
+                                            Spacer().frame(height: 7)
+                                            
+                                            HStack {
+                                                Text("\(item.content ?? "")")
+                                                    .lato(family: .Regular, size: 12)
+                                                    .foregroundColor(.black.opacity(0.8))
+
+                                                Spacer()
+                                            }
+                                        }
+
+                                        
+                                        Spacer()
+
+                                    }
+                                    
+                                    Spacer().frame(height: 20)
+                                }
+
+
+                            }
                         }
                         
-
                     }
+                    
+                    
+                    Spacer()
                 }
+
             }
+        }
+        .onAppear {
+//            hagwonData.id
+            viewModel.getReviews()
         }
     }
 }

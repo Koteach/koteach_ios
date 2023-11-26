@@ -26,19 +26,13 @@ struct AcademySearchandFilterBar: View {
             }
             Spacer()
             
-            //            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            //                Image(systemName: "line.3.horizontal.decrease.circle")
-            //                    .foregroundStyle(.black)
-            //
-            //            })
-            
         }
         .padding(.horizontal)
         .padding(.vertical, 10)
         .overlay {
             Capsule()
                 .stroke(lineWidth: 0.5)
-                .fill(.blue)
+                .fill(.black.opacity(0.6))
             Spacer()
             
         }

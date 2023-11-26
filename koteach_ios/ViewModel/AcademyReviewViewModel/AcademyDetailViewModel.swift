@@ -10,6 +10,21 @@ import Combine
 
 class AcademyDetailViewModel: ObservableObject {
     
+    private var cancellable = Set<AnyCancellable>()
+
+    @Published var reviewDatas: [ReviewModel]?
     
+    func getReviews() {
+        KoteachAPI.getReviews(1)
+            .compactMap { $0 }
+            .sink(receiveCompletion: { result in
+                print("\(result)")
+            }, receiveValue: { [weak self] model in
+                print("\(model)")
+                
+                self?.reviewDatas = model
+            })
+            .store(in: &cancellable)
+    }
     
 }

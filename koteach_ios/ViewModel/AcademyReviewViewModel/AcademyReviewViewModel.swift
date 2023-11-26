@@ -12,7 +12,7 @@ class AcademyReviewViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
 
-    @Published var reviewDatas: [HagwonModel]?
+    @Published var hagwonDatas: [HagwonModel]?
     
     init() {
         getHagwons()
@@ -26,7 +26,7 @@ class AcademyReviewViewModel: ObservableObject {
             }, receiveValue: { [weak self] model in
                 print("\(model)")
                 
-                self?.reviewDatas = model
+                self?.hagwonDatas = model
             })
             .store(in: &cancellable)
 

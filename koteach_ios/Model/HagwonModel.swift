@@ -16,3 +16,12 @@ struct HagwonModel: Codable, Hashable {
     let create_at: String?
     let modified_at: String?
 }
+
+struct ReviewModel: Codable, Hashable {
+    let id: Int?
+    let hagwon_id: Int?
+    let title: String?
+    let content: String?
+    let raring: Int?
+    let createdAt: String?
+}
