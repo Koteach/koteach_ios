@@ -13,27 +13,60 @@ struct LawChatbotView: View {
     @State var input: String = ""
     
     var body: some View {
+        var isAnswered = viewModel.answer.answer != ""
+        
         ZStack {
-            LazyVStack {
+            VStack {
+                Spacer()
+
                 ScrollView(.vertical, showsIndicators: false) {
+                    Spacer().frame(height: 20)
+                    
                     HStack {
                         Spacer().frame(width: 20)
                         
-                        Text("\(viewModel.answer.answer ?? "")")
+                        ZStack {
+                            
+                            Text("\(viewModel.answer.answer ?? "")")
+                                .lato(family: .Regular, size: 16)
+                                .foregroundColor(.white)
+                                .padding([.leading, .top, .trailing, .bottom], 10)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .foregroundColor(.green)
+                                )
+                        }
+                        .opacity(isAnswered ? 1.0 : 0.0)
+                        .animation(.easeInOut)
 
+                        
+                        
                         Spacer().frame(width: 20)
-
+                        
                     }
+                    
+                    VStack {
+                        Spacer()
+                        Text("Still waiting your Question :)")
+                            .opacity(isAnswered ? 0.0 : 1.0)
+                            .animation(.easeInOut)
+
+                        Spacer()
+                    }
+                    
+                    Spacer().frame(height: 70)
                 }
-                
+                Spacer()
             }
-            
             
             
             VStack {
                 Spacer()
                 
                 ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                    
                     HStack {
                         Spacer().frame(width: 20)
                         
@@ -42,19 +75,17 @@ struct LawChatbotView: View {
                         }
                         
                         Spacer().frame(width: 10)
-
+                        
                         
                         Button {
                             viewModel.getChatbotAnswer(input)
                         } label: {
-//                            Text("Send")
                             Image(systemName: "paperplane")
-//                                .foregroundColor(<#T##color: Color?##Color?#>)
                         }
-
+                        
                         
                         Spacer().frame(width: 20)
-
+                        
                     }
                     
                     HStack {
@@ -62,13 +93,15 @@ struct LawChatbotView: View {
                         
                         
                         Spacer().frame(width: 20)
-
+                        
                     }
                 }
-                
-                Spacer().frame(height: 10)
+                .frame(height: 50)
             }
-//            ProgressView()
+            
+            if viewModel.isLoading {
+                ProgressView()
+            }
             
 
         }

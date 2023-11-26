@@ -12,10 +12,12 @@ class LawChatbotViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
 
-    @Published var answer: AnswerModel = AnswerModel(answer: "'", time: "")
+    @Published var answer: AnswerModel = AnswerModel(answer: "", time: "")
     
+    @Published var isLoading: Bool = false
     
     func getChatbotAnswer(_ text: String) {
+        isLoading = true
         KoteachAPI.getAnswer(text)
             .compactMap { $0 }
             .sink(receiveCompletion: { result in
@@ -23,6 +25,8 @@ class LawChatbotViewModel: ObservableObject {
             }, receiveValue: { [weak self] model in
                 
                 self?.answer = model
+                self?.isLoading = false
+
             })
             .store(in: &cancellable)
 
