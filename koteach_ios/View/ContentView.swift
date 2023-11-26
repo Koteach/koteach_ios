@@ -19,29 +19,15 @@ struct ContentView: View {
                     Text("Hagwon")
                 }
             
-            VStack {
-                AcademySearchandFilterBar()
-                
-                ScrollView {
-                    LazyVStack (spacing: 30) {
-                        ForEach (0 ... 10, id: \.self) { listing in Rectangle()
-                                .frame(height: 400)
-                                .foregroundColor(.green)
-                                .clipShape(RoundedRectangle(cornerRadius: 100))
-                            
-                        }
-                    }
-                    .padding()
+            LawChatbotView()
+                .tabItem {
+                    Image(systemName: "character.bubble")
+                    Text("Chatbot")
+                    
                 }
-            }
-            .tabItem {
-                Image(systemName: "character.bubble")
-                Text("Chatbot")
-                
-            }
             
             CalculatorView()
-            .tabItem {
+                .tabItem {
                 Image(systemName: "dollarsign.square")
                 Text("Calculator")
             }

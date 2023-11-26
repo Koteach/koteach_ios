@@ -6,45 +6,47 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AcademyReviewView: View {
+    @ObservedObject var viewModel = AcademyReviewViewModel()
+
     @State var showingBottomSheetView = false
     
-    //    AcademyDetailView(showingBottomSheetView: $showingBottomSheetView)
-    
-    
     var body: some View {
+        
         NavigationStack {
             VStack {
-                HStack {
-                    Spacer().frame(width: 20)
-                    AcademySearchandFilterBar()
-                    Spacer().frame(width: 20)
-                }
-                
-                ScrollView {
-                    LazyVStack (spacing: 5) {
-                        ForEach (0 ... 10, id: \.self) { listing in
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 30)
-                                    .foregroundColor(.white)
-                                    .overlay {
-                                        RoundedRectangle(cornerRadius: 10)
+            HStack {
+                Spacer().frame(width: 20)
+                AcademySearchandFilterBar()
+                Spacer().frame(width: 20)
+            }
+            
+            ScrollView {
+                LazyVStack (spacing: 20) {
+                    if let data = viewModel.reviewDatas {
+                        ForEach (data, id: \.self) { item in
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .foregroundColor(.white)
+                                        .overlay {
+                                            RoundedRectangle(cornerRadius: 10)
                                             .stroke(.gray, lineWidth: 0.5)
-                                    }
-                                
-                                //Academy details
-                                
-                                HStack() {
-                                    // Details
-                                    Spacer().frame(width: 12)
+                                        }
                                     
+                                    //Academy details
                                     
-                                    VStack(alignment: .leading) {
-                                        Spacer().frame(height: 20)
+                                    HStack() {
+                                        // Details
+                                        Spacer().frame(width: 12)
                                         
+                                        
+                                        VStack(alignment: .leading) {
+                                            Spacer().frame(height: 12)
+
                                         HStack {
-                                            Text("School Name")
+                                            Text("\(item.name ?? "")")
                                                 .lato(family: .Bold, size: 15)
                                                 .foregroundColor(.black)
                                             Spacer().frame(width: 175)
@@ -55,41 +57,41 @@ struct AcademyReviewView: View {
                                         .onTapGesture {
                                             print("")
                                         }
-                                        
-                                        HStack(spacing: 0) {
                                             
-                                            Text("Location, City")
-                                                .foregroundStyle(.gray)
-                                                .lato(family: .Light, size: 10)
-                                            
-                                            Spacer().frame(width: 10)
-                                            
-                                            Image(systemName: "star.fill")
-                                                .resizable()
-                                                .frame(width: 12, height: 12)
+                                            HStack(spacing: 0) {
+                                                
+                                                Text("\(item.location ?? "")")
+                                                    .foregroundStyle(.gray)
+                                                    .lato(family: .Light, size: 10)
+                                                
+                                                Spacer().frame(width: 10)
+                                                
+                                                Image(systemName: "star.fill")
+                                                    .resizable()
+                                                    .frame(width: 12, height: 12)
                                                 .foregroundColor(.yellow)
+                                                
+                                                Spacer().frame(width: 1)
+                                                
+                                                Text(String(format: "%.1f", item.average_rating ?? 0.0))
+                                                    .lato(family: .Light, size: 10)
+                                            }
+                                            Spacer().frame(height: 10)
                                             
-                                            Spacer().frame(width: 1)
+                                            HStack {
+                                                Text("\(item.description ?? "")")
+                                                    .lato(family: .Regular, size: 12)
+                                                    .foregroundColor(.black)
+                                                
+                                                Spacer()
+                                            }
                                             
-                                            Text("4.5")
-                                                .lato(family: .Light, size: 10)
-                                        }
-                                        Spacer().frame(height: 10)
-                                        
-                                        HStack {
-                                            Text("Hagwon information Hagwon information Hagwon information Hagwon information Hagwon information Hagwon information Hagwon information Hagwon information")
+                                            Spacer().frame(height: 12)
                                             
-                                                .lato(family: .Regular, size: 12)
-                                                .foregroundColor(.black)
-                                            
-                                            Spacer()
-                                        }
-                                        
-                                        Spacer().frame(height: 12)
-                                        
-                                        HStack {
-                                            Spacer().frame(width: 10)
-                                            
+                                            HStack {
+                                                Spacer().frame(width: 10)
+                                                
+                                                HStack {
                                             HStack {
                                                 Image(systemName: "hand.thumbsup")
                                                     .resizable()
@@ -102,8 +104,6 @@ struct AcademyReviewView: View {
                                                 print("Like")
                                             }
                                             
-                                            
-                                            //                                        Spacer().frame(width: 61)
                                             Spacer()
                                             
                                             HStack {
@@ -116,7 +116,7 @@ struct AcademyReviewView: View {
                                                 }
                                                 
                                             }
-                                            //
+                                                    
                                             Spacer()
                                             
                                             HStack {
@@ -127,21 +127,18 @@ struct AcademyReviewView: View {
                                             .onTapGesture {
                                                 print("Save")
                                             }
+                                            Spacer().frame(height: 10)
                                             
-                                            Spacer().frame(width: 10)
-                                            
-                                        }
-                                        
-                                        Spacer().frame(height: 10)
-                                        
+                                        Spacer()
                                     }
-                                    Spacer()
                                 }
+                                .padding()
+                                
                             }
-                            .padding()
-                            
                         }
+
                     }
+
                 }
                 .padding()
             }

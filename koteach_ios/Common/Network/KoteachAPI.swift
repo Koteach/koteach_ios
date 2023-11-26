@@ -10,16 +10,17 @@ import Alamofire
 import Combine
 
 enum KoteachAPI {
-    static let baseURL = URL(string: "http://18.133.26.124")!
-    
+
+    static var baseURL = URL(string: "http://18.133.26.124")!
+
     static let localURL = URL(string: "http://18.133.26.124")!
     
     static func headers() -> HTTPHeaders {
         return [
-            "Authorization": "", // Token
-            "Content-Language": "ko",
+//            "Authorization": "", // Token
+//            "Content-Language": "ko",
             "Accept": "application/json",
-            "Content-Type": "application/x-www-form-urlencoded"
+//            "Content-Type": "application/x-www-form-urlencoded"
         ]
     }
     
@@ -38,9 +39,12 @@ extension KoteachAPI {
                         promise(.failure(error))
                     }
                 }
-            
-            request.cancel()
-        }.eraseToAnyPublisher()
+        }
+        .handleEvents(receiveCancel: {
+            // 취소 시 처리 로직 추가
+            print("Request canceled")
+        })
+        .eraseToAnyPublisher()
     }
 
     
